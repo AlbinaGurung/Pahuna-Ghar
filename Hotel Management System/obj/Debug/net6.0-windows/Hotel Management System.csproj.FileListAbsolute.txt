@@ -1,0 +1,186 @@
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.csproj.GenerateResource.cache
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.AssemblyInfo.cs
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.exe
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.deps.json
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.runtimeconfig.json
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.dll
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.pdb
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\BCrypt.Net-Core.dll
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\Dapper.dll
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\Google.Protobuf.dll
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\MySql.Data.dll
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\Ubiety.Dns.Core.dll
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\ZstdNet.dll
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.csproj.CopyComplete
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.dll
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\refint\Hotel Management System.dll
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.pdb
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.genruntimeconfig.cache
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\ref\Hotel Management System.dll
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Properties.Resources.resources
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.UserControl1.resources
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Form5.resources
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.DailyRecords.resources
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Dashboard.resources
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Login.resources
+C:\Users\user\Desktop\4th project\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Guests.resources
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.exe
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.deps.json
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.runtimeconfig.json
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.dll
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.pdb
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\BCrypt.Net-Core.dll
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\Dapper.dll
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\Google.Protobuf.dll
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\MySql.Data.dll
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\Ubiety.Dns.Core.dll
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\ZstdNet.dll
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Form5.resources
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.DailyRecords.resources
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Dashboard.resources
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Guests.resources
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Login.resources
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Properties.Resources.resources
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.UserControl1.resources
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.AssemblyInfo.cs
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.csproj.CopyComplete
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.dll
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\refint\Hotel Management System.dll
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.pdb
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.genruntimeconfig.cache
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\ref\Hotel Management System.dll
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.RoomsForm.resources
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Drinks.resources
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Meals.resources
+C:\Users\user\Desktop\Hotel Management System\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Staffs.resources
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.exe
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.deps.json
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.runtimeconfig.json
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.dll
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.pdb
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\bin\Debug\net6.0-windows\BCrypt.Net-Core.dll
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\bin\Debug\net6.0-windows\Dapper.dll
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\bin\Debug\net6.0-windows\Google.Protobuf.dll
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\bin\Debug\net6.0-windows\MySql.Data.dll
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\bin\Debug\net6.0-windows\Ubiety.Dns.Core.dll
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\bin\Debug\net6.0-windows\ZstdNet.dll
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Form5.resources
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.DailyRecords.resources
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Dashboard.resources
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Drinks.resources
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Guests.resources
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Login.resources
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Meals.resources
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Properties.Resources.resources
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.RoomsForm.resources
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Staffs.resources
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.UserControl1.resources
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.AssemblyInfo.cs
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.csproj.CopyComplete
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.dll
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\refint\Hotel Management System.dll
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.pdb
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.genruntimeconfig.cache
+C:\Users\user\Desktop\Hotel Management System22 - Copy\Hotel Management System\obj\Debug\net6.0-windows\ref\Hotel Management System.dll
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.exe
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.deps.json
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.runtimeconfig.json
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.dll
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.pdb
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\BCrypt.Net-Core.dll
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\Dapper.dll
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\Google.Protobuf.dll
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\MySql.Data.dll
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\Ubiety.Dns.Core.dll
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\ZstdNet.dll
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Form5.resources
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.DailyRecords.resources
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Dashboard.resources
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Drinks.resources
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Guests.resources
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Login.resources
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Meals.resources
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Properties.Resources.resources
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.RoomsForm.resources
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Staffs.resources
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.UserControl1.resources
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.AssemblyInfo.cs
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.csproj.CopyComplete
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.dll
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\refint\Hotel Management System.dll
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.pdb
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.genruntimeconfig.cache
+C:\Users\user\Desktop\Hotel Management System33 - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\ref\Hotel Management System.dll
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.exe
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.deps.json
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.runtimeconfig.json
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.dll
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\Hotel Management System.pdb
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\BCrypt.Net-Core.dll
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\Dapper.dll
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\Google.Protobuf.dll
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\MySql.Data.dll
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\Ubiety.Dns.Core.dll
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\ZstdNet.dll
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Form5.resources
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.DailyRecords.resources
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Dashboard.resources
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Guests.resources
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Login.resources
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Properties.Resources.resources
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.RoomsForm.resources
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.Staffs.resources
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.UserControl1.resources
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.AssemblyInfo.cs
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.csproj.CopyComplete
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.dll
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\refint\Hotel Management System.dll
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.pdb
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel Management System.genruntimeconfig.cache
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\ref\Hotel Management System.dll
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.MealsFrm.resources
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.DrinksModel.resources
