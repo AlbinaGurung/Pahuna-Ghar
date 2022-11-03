@@ -70,6 +70,7 @@ namespace Hotel_Management_System
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -157,16 +158,33 @@ namespace Hotel_Management_System
             obj.VAT=GetValue(vattbx.Text);
             obj.Rate=GetValue(ratetbx.Text);
             obj.Qty=Convert.ToInt32(quantitytbx.Text.ValueOrProvided("0"));
-            var TOTAL = obj.CalculateAmount();
-            var fullTotal = GetTotalAmount();
+            obj.TotalAmount=calulate_total_amount();
+            billingItems.Add(obj);//The items should be added into the binding list before the GetFullTotal() is called otherwise the list of items amount wouldnot have contained any amt.
+            var fullTotal = GetFullTotal();
             Totaltbx.Text = fullTotal.ToString();
-            billingItems.Add(obj);
-            Totaltbx.Text=Convert.ToString(TOTAL);
+            
+
+            //var TOTAL = obj.CalculateAmount();
+            //Totaltbx.Text=Convert.ToString(TOTAL);
+        }
+        private decimal calulate_total_amount()
+        {
+            var discount = GetValue(discounttbx.Text.ValueOrProvided("0"));
+            var qtn = GetValue(quantitytbx.Text.ValueOrProvided("0"));
+            var rate = GetValue(ratetbx.Text.ValueOrProvided("0"));
+            var vat = GetValue(vattbx.Text.ValueOrProvided("0"));
+            var tax = GetValue(taxtbx.Text.ValueOrProvided("0"));
+            var TotalAmount=(qtn*rate);
+
+            TotalAmount=TotalAmount - discount+(TotalAmount*(tax/100))+(TotalAmount*(vat/100));
+            return TotalAmount;
         }
 
-        private decimal GetTotalAmount()
+        private decimal GetFullTotal()
         {
-            return billingItems.Sum(x => x.TotalAmount);
+
+           var FullTotal= billingItems.Sum(x => x.TotalAmount);
+            return FullTotal;
         }
 
         public decimal GetValue(string text)
@@ -183,8 +201,8 @@ namespace Hotel_Management_System
             using var tx = new TransactionScope();
             using var conn = ConnectionProvider.GetDbConnection();
             var customername = customernametbx.Text;
-            var customeraddress = customeraddresstbx.Text;
-            var customerpan = customerpantbx.Text;
+            var customeraddress = customerpantbx.Text;
+            var customerpan = customeraddresstbx.Text;
 
             var billInsertQuery = @"INSERT INTO `bill`(`Date`, `CustomerName`, `CustomerAddress`, `CustomerPan`, `TotalAmount`) VALUES (@date, @CustomerName, @CustomerAddress, @CustomerPan,@TotalAmount); select last_insert_id()";
 
@@ -194,7 +212,7 @@ namespace Hotel_Management_System
                 CustomerName = customername,
                 customerAddress = customeraddress,
                 CustomerPan = customerpan,
-                TotalAmount = GetTotalAmount()
+                TotalAmount = GetFullTotal()
             });
 
             foreach(var item in billingItems)
@@ -239,7 +257,19 @@ namespace Hotel_Management_System
         private void button3_Click(object sender, EventArgs e)
         {
             DGVPrinter printer = new DGVPrinter();
-            printer.Title="DataGridView Report";
+            printer.Title = "\r\n\r\n\n\n\nPahuna Ghar";
+            printer.SubTitle = $"\n\nBirtmode-4, Jhapa,Mechinagar\r\ntelephone: 023598 ph no:9806068043\n\n\n\n Date: {dateTimePicker2.Value.ToString("yyyy-mm-dd")}\n\n Customer Name: {customernametbx.Text}   Customer Pan={customerpantbx.Text} Address: {customerpantbx.Text} \n\n\n\n";
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = $"Discount: {discounttbx.Text}%\r\nTAX:{taxtbx.Text}%\r\nVAT: {vattbx.Text}%\r\nGrand Total: {Totaltbx.Text} \r\nThank You!!";
+            printer.FooterSpacing = 15;
+            printer.PrintPreviewDataGridView(dataGridView1);
+
+           /* DGVPrinter printer = new DGVPrinter();
+            printer.Title="Bill";
             printer.SubTitle=String.Format("Products", printer.SubTitleColor=Color.Black, printer);
             printer.SubTitleFormatFlags=StringFormatFlags.LineLimit|StringFormatFlags.NoClip;
             printer.PageNumberInHeader=false;
@@ -247,6 +277,7 @@ namespace Hotel_Management_System
             printer.Footer="List of products";
             printer.FooterSpacing=1;
             printer.PrintPreviewDataGridView(dataGridView1);
+           */
         }
     }
 }

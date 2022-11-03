@@ -59,11 +59,11 @@
             this.bsitems = new System.Windows.Forms.BindingSource(this.components);
             this.savedatabtn = new System.Windows.Forms.Button();
             this.customernametbx = new System.Windows.Forms.TextBox();
-            this.customeraddresstbx = new System.Windows.Forms.TextBox();
+            this.customerpantbx = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.customerpantbx = new System.Windows.Forms.TextBox();
+            this.customeraddresstbx = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.roomcb = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -291,7 +291,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(216, 38);
             this.button3.TabIndex = 25;
-            this.button3.Text = "SAVE AND PRINT";
+            this.button3.Text = " PRINT BILL";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -384,12 +384,12 @@
             this.customernametbx.Size = new System.Drawing.Size(100, 23);
             this.customernametbx.TabIndex = 33;
             // 
-            // customeraddresstbx
+            // customerpantbx
             // 
-            this.customeraddresstbx.Location = new System.Drawing.Point(932, 248);
-            this.customeraddresstbx.Name = "customeraddresstbx";
-            this.customeraddresstbx.Size = new System.Drawing.Size(100, 23);
-            this.customeraddresstbx.TabIndex = 34;
+            this.customerpantbx.Location = new System.Drawing.Point(932, 280);
+            this.customerpantbx.Name = "customerpantbx";
+            this.customerpantbx.Size = new System.Drawing.Size(100, 23);
+            this.customerpantbx.TabIndex = 34;
             // 
             // label9
             // 
@@ -420,12 +420,12 @@
             this.label15.TabIndex = 37;
             this.label15.Text = "CustomerAddress";
             // 
-            // customerpantbx
+            // customeraddresstbx
             // 
-            this.customerpantbx.Location = new System.Drawing.Point(932, 280);
-            this.customerpantbx.Name = "customerpantbx";
-            this.customerpantbx.Size = new System.Drawing.Size(100, 23);
-            this.customerpantbx.TabIndex = 34;
+            this.customeraddresstbx.Location = new System.Drawing.Point(932, 248);
+            this.customeraddresstbx.Name = "customeraddresstbx";
+            this.customeraddresstbx.Size = new System.Drawing.Size(100, 23);
+            this.customeraddresstbx.TabIndex = 34;
             // 
             // label16
             // 
@@ -474,8 +474,8 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.customerpantbx);
             this.Controls.Add(this.customeraddresstbx);
+            this.Controls.Add(this.customerpantbx);
             this.Controls.Add(this.customernametbx);
             this.Controls.Add(this.savedatabtn);
             this.Controls.Add(this.panel1);
@@ -542,11 +542,11 @@
         private BindingSource bsitems;
         private Button savedatabtn;
         private TextBox customernametbx;
-        private TextBox customeraddresstbx;
+        private TextBox customerpantbx;
         private Label label9;
         private Label label14;
         private Label label15;
-        private TextBox customerpantbx;
+        private TextBox customeraddresstbx;
         private Label label16;
         private ComboBox roomcb;
         private Label label17;
