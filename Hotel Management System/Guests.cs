@@ -255,10 +255,12 @@ namespace Hotel_Management_System
 
         private void gotodrinksbtn_Click(object sender, EventArgs e)
         {
-            Drinks f1 = new Drinks();
+            DrinksModel f1 = new DrinksModel();
+           
             this.Hide();
             f1.ShowDialog();
             this.Show();
+           
 
         }
     }

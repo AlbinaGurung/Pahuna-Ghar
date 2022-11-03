@@ -14,6 +14,7 @@ using Hotel_Management_System.Classes;
 using Hotel_Management_System.Extensions;
 using Hotel_Management_System.Models;
 using MySql.Data;
+using DGVPrinterHelper;
 using MySql.Data.MySqlClient;
 
 
@@ -233,6 +234,19 @@ namespace Hotel_Management_System
         private void label14_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title="DataGridView Report";
+            printer.SubTitle=String.Format("Products", printer.SubTitleColor=Color.Black, printer);
+            printer.SubTitleFormatFlags=StringFormatFlags.LineLimit|StringFormatFlags.NoClip;
+            printer.PageNumberInHeader=false;
+            printer.PorportionalColumns=true;
+            printer.Footer="List of products";
+            printer.FooterSpacing=1;
+            printer.PrintPreviewDataGridView(dataGridView1);
         }
     }
 }
