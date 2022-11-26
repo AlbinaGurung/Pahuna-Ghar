@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Dapper;
 using Hotel_Management_System.Extensions;
 using Hotel_Management_System.Models;
+using MySql.Data.MySqlClient;
+
 
 namespace Hotel_Management_System
 {
@@ -52,6 +54,7 @@ namespace Hotel_Management_System
 
         private void Guests_Load_1(object sender, EventArgs e)
         {
+            loadrooms();
             loadguests();
         }
 
@@ -63,6 +66,9 @@ namespace Hotel_Management_System
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+
+            check_if_room_available();
+         
         }
 
         private void ADDbtn_Click(object sender, EventArgs e)
@@ -80,12 +86,36 @@ namespace Hotel_Management_System
             DateTime checkout = CheckoutTimepicker.Value;
             using var conn = ConnectionProvider.GetDbConnection();
 
-            var query = "INSERT INTO `customers` (`Guest_ID`, `Guest_Name`, `Gender`,`Guest_Address`, `Guest_Contact`, `Guest_Email`, `Room_No`, `No_Of_Individuals`, `Checkin`, `Checkout`) " +
-                "VALUES (@ID, @Name, @gender,@Address, @Phone, @Email, @RoomNo, @NoOfGuests, @Checkin, @Checkout);";
-            conn.Execute(query, new { ID = GuestID, Name = name,gender=Gender, Address = address, NoOfGuests= noofguests, Phone = phone, Email = email, RoomNo = roomno, Checkin = checkin, Checkout = checkout });
-            conn.Close();
-            MessageBox.Show("Added Successfully");
-            loadguests();
+            /* MySqlDataReader reader;
+             var query = $"SELECT COUNT(Room_No)  FROM `customers` WHERE Room_No=@RoomNo;";
+             query.Parameters.AddWithValue("RoomNo",roomno);
+             reader=query.Execute();                                                                                                                                                                                                                                                                                                                                
+             */
+
+            int count=0;
+            count=check_if_room_available();
+            if (count>0)
+            {
+
+                MessageBox.Show("The room no" + roomno + "is not available.\n Please Enter Another Roomno ");
+                MessageBox.Show("The value of count is" +count);
+            
+            }
+            else
+            {
+                var query1 = "INSERT INTO `guests` (`Guest_ID`, `Guest_Name`, `Gender`,`Guest_Address`, `Guest_Contact`, `Guest_Email`, `Room_No`, `No_Of_Individuals`, `Checkin`, `Checkout`) " +
+                        "VALUES (@ID, @Name, @gender,@Address, @Phone, @Email, @RoomNo, @NoOfGuests, @Checkin, @Checkout);";
+                conn.Execute(query1, new { ID = GuestID, Name = name, gender = Gender, Address = address, NoOfGuests = noofguests, Phone = phone, Email = email, RoomNo = roomno, Checkin = checkin, Checkout = checkout });
+                conn.Close();
+
+                MessageBox.Show("Added Successfully");
+                MessageBox.Show("The value of count is" +count);
+
+                var query2 = "UPDATE room SET IsAvailable = 'NO' WHERE Room_No = @RoomNo; ";
+                conn.Execute(query2, new { RoomNo=RoomNotbx.Text});
+                loadguests();   
+
+            }
         }
         /*private void loadguests()
          {
@@ -110,9 +140,19 @@ namespace Hotel_Management_System
              });
              guestDgv.DataSource = guests;
          }*/
+        private void loadrooms()
+        {
+            var query = "SELECT * FROM `room`";
+            using var conn = ConnectionProvider.GetDbConnection();
+            var rooms = conn.Query<roomsmodel>(query, new
+            {
+
+            });
+            dgvrooms.DataSource=rooms;
+        }
         private void loadguests()
         {
-            var query = "SELECT * FROM `customers`";
+            var query = "SELECT * FROM `guests`";
                 using var conn = ConnectionProvider.GetDbConnection();
             var guests = conn.Query<GuestModel>(query, new
             {
@@ -141,7 +181,7 @@ namespace Hotel_Management_System
         private void btnSearch_Click(object sender, EventArgs e)
         {
             var searchQuery = Searchtbx.Text.ValueOrNull();
-            var query = "SELECT * FROM `customers` WHERE (@guestid is null or Guest_ID = @guestid) and (@name is null or Guest_Name like '%@name' )";
+            var query = "SELECT * FROM `guests` WHERE (@guestid is null or Guest_ID = @guestid) and (@name is null or Guest_Name like '%@name' )";
 
             using var conn = ConnectionProvider.GetDbConnection();
             var guests = conn.Query<GuestModel>(query, new
@@ -166,8 +206,9 @@ namespace Hotel_Management_System
             var checkout = CheckoutTimepicker.Text;
             using var conn = ConnectionProvider.GetDbConnection();
 
-            var query = "UPDATE `customers` SET `Guest_Name` = @Name, `Guest_Address` = @address, `Gender`=@gender,`Guest_Contact` = @Contact, `Guest_Email` = @Email, `Room_No` = @RoomNo, `No_Of_Individuals` = @NoOfIndividuals, `Checkin` = @CheckIn, `Checkout` = @CheckOut WHERE `customers`.`Guest_ID` = @guestid;";
+            var query = "UPDATE `guests` SET `Guest_Name` = @Name, `Guest_Address` = @address, `Gender`=@gender,`Guest_Contact` = @Contact, `Guest_Email` = @Email, `Room_No` = @RoomNo, `No_Of_Individuals` = @NoOfIndividuals, `Checkin` = @CheckIn, `Checkout` = @CheckOut WHERE `guests`.`Guest_ID` = @guestid;";
 
+            
             conn.Execute(query, new { guestid=GuestID,Name=name,gender=Gender, Address=address,Contact=phone,RoomNo=roomno,Email=email,NoOfIndividuals=noofindividuals,CheckIn=checkin,CheckOut=checkout});
             
             conn.Close();
@@ -179,7 +220,7 @@ namespace Hotel_Management_System
         {
             if (Searchtbx.Text!=null)
             {
-                var query = "SELECT * FROM `customers` WHERE Guest_ID = @guestid or Guest_Name = @name or  Guest_Address=@Address or Guest_Contact=@Contact";
+                var query = "SELECT * FROM `guests` WHERE Guest_ID = @guestid or Guest_Name = @name or  Guest_Address=@Address or Guest_Contact=@Contact";
 
                 using var conn = ConnectionProvider.GetDbConnection();
                 var guests = conn.Query<GuestModel>(query, new
@@ -197,7 +238,7 @@ namespace Hotel_Management_System
             var ID = GuestIDtbx.Text;
             using var conn = ConnectionProvider.GetDbConnection();
 
-            var query = "DELETE FROM `customers` WHERE `customers`.`Guest_ID` = @Guest_ID;";
+            var query = "DELETE FROM `guests` WHERE `customers`.`Guest_ID` = @Guest_ID;";
             conn.Execute(query, new { Guest_ID = ID });
             conn.Close();
             MessageBox.Show("Successfully Deleted");
@@ -261,6 +302,36 @@ namespace Hotel_Management_System
             f1.ShowDialog();
             this.Show();
            
+
+        }
+
+        private void RoomNotbx_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+        public int check_if_room_available()
+        {
+
+            using var conn = ConnectionProvider.GetDbConnection();
+            var roomno = (RoomNotbx.Text);
+            var query = $"SELECT COUNT(Room_No)  FROM `guests` WHERE Room_No=@RoomNo;";
+            var count = conn.ExecuteScalar(query, new { RoomNo = roomno });
+
+            return Convert.ToInt32(count);
+        }
+
+        private void GuestContactlbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GuestContacttbx_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RoomNolbl_Click(object sender, EventArgs e)
+        {
 
         }
     }

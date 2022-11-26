@@ -43,6 +43,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.generateBill = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -238,12 +239,23 @@
             this.label2.TabIndex = 29;
             this.label2.Text = "PAN: xxxx-xxxxx-xxxxx-xxxxx";
             // 
+            // generateBill
+            // 
+            this.generateBill.Location = new System.Drawing.Point(183, 126);
+            this.generateBill.Name = "generateBill";
+            this.generateBill.Size = new System.Drawing.Size(149, 48);
+            this.generateBill.TabIndex = 30;
+            this.generateBill.Text = "Generate Bill";
+            this.generateBill.UseVisualStyleBackColor = true;
+            this.generateBill.Click += new System.EventHandler(this.generateBill_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(800, 483);
+            this.Controls.Add(this.generateBill);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -280,5 +292,6 @@
         private Label label13;
         private Label label2;
         private Button button8;
+        private Button generateBill;
     }
 }

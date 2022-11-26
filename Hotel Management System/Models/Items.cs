@@ -10,6 +10,7 @@ namespace Hotel_Management_System.Models
     public class Items
     {
         public int Bill_ID { get; set; }
+        public char Guest_Contact { get; set; }
         public int Item_Id { get; set; }
         public  string Item { get;  set; }
         public string Descriptions { get; set; }

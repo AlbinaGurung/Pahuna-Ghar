@@ -184,3 +184,4 @@ C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Manag
 C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\ref\Hotel Management System.dll
 C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.MealsFrm.resources
 C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.DrinksModel.resources
+C:\Users\user\Desktop\Hotel Management System44 - Copy - Copy - Copy\Hotel Management System\obj\Debug\net6.0-windows\Hotel_Management_System.GenerateBill.resources

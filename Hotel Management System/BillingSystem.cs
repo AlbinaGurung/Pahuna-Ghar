@@ -28,6 +28,7 @@ namespace Hotel_Management_System
         {
             InitializeComponent();
             Load += Form5_Load1;
+
             billingItems = new BindingList<Items>();
             dataGridView1.DataSource = billingItems;
         }
@@ -154,6 +155,7 @@ namespace Hotel_Management_System
 
             obj.Item=itemsCB.Text;
             obj.Discount= GetValue(discounttbx.Text);
+            obj.Guest_Contact=Convert.ToChar(GuestContacttbx.Text);
             obj.Tax=GetValue(taxtbx.Text);
             obj.VAT=GetValue(vattbx.Text);
             obj.Rate=GetValue(ratetbx.Text);
@@ -217,19 +219,20 @@ namespace Hotel_Management_System
 
             foreach(var item in billingItems)
             {
-                var query = "INSERT INTO `transactions` (`Bill_ID`,`Item_ID`, `Items`,`Descriptions`,`Rate`,`Qty`,`Discount`,`TAX`,`VAT`,`TotalAmount`) VALUES (@billID,@Item_ID,@Items,@Descriptions,@Rate,@Qty,@Discount,@TAX,@VAT,@TotalAmount);";
-                conn.Execute(query, new { 
+                var query = "INSERT INTO `transactions` (`Bill_ID`,`Guest_Contact`,`Item_ID`, `Items`,`Descriptions`,`Rate`,`Qty`,`Discount`,`TAX`,`VAT`,`TotalAmount`) VALUES (@billID,@Guest_Contact,@Item_ID,@Items,@Descriptions,@Rate,@Qty,@Discount,@TAX,@VAT,@TotalAmount);";
+                conn.Execute(query, new {
                     Item_ID = item.Item_Id,
-                    Items=item.Item,
-                    Descriptions=Descriptiontbx.Text,
-                    Rate=item.Rate,
-                    Qty=item.Qty,
-                    Discount=item.Discount,
-                    TAX=item.Tax,
-                    VAT=item.VAT,
-                    TotalAmount=item.TotalAmount,
+                    Guest_Contact = item.Guest_Contact,
+                    Items = item.Item,
+                    Descriptions = Descriptiontbx.Text,
+                    Rate = item.Rate,
+                    Qty = item.Qty,
+                    Discount = item.Discount,
+                    TAX = item.Tax,
+                    VAT = item.VAT,
+                    TotalAmount = item.TotalAmount,
                     billID = billId
-                });
+                }) ;
             }
                                               /*
             for (int i = 0; i<dataGridView1.Rows.Count; i++)

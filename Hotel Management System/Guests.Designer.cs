@@ -65,8 +65,10 @@
             this.gotomealsbtn = new System.Windows.Forms.Button();
             this.gotodrinksbtn = new System.Windows.Forms.Button();
             this.generatebillbtn = new System.Windows.Forms.Button();
+            this.dgvrooms = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.guestDgv)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvrooms)).BeginInit();
             this.SuspendLayout();
             // 
             // GuestID
@@ -131,6 +133,7 @@
             this.GuestContacttbx.Name = "GuestContacttbx";
             this.GuestContacttbx.Size = new System.Drawing.Size(169, 29);
             this.GuestContacttbx.TabIndex = 7;
+            this.GuestContacttbx.TextChanged += new System.EventHandler(this.GuestContacttbx_TextChanged);
             // 
             // GuestContactlbl
             // 
@@ -141,6 +144,7 @@
             this.GuestContactlbl.Size = new System.Drawing.Size(107, 21);
             this.GuestContactlbl.TabIndex = 6;
             this.GuestContactlbl.Text = "Guest Contact";
+            this.GuestContactlbl.Click += new System.EventHandler(this.GuestContactlbl_Click);
             // 
             // GuestEmailtbx
             // 
@@ -168,6 +172,7 @@
             this.RoomNotbx.Size = new System.Drawing.Size(169, 29);
             this.RoomNotbx.TabIndex = 11;
             this.RoomNotbx.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.RoomNotbx.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RoomNotbx_KeyPress);
             // 
             // RoomNolbl
             // 
@@ -178,6 +183,7 @@
             this.RoomNolbl.Size = new System.Drawing.Size(77, 21);
             this.RoomNolbl.TabIndex = 10;
             this.RoomNolbl.Text = "Room No";
+            this.RoomNolbl.Click += new System.EventHandler(this.RoomNolbl_Click);
             // 
             // NoOfIndividualstbx
             // 
@@ -223,7 +229,7 @@
             this.guestDgv.Location = new System.Drawing.Point(17, 434);
             this.guestDgv.Name = "guestDgv";
             this.guestDgv.RowTemplate.Height = 25;
-            this.guestDgv.Size = new System.Drawing.Size(966, 148);
+            this.guestDgv.Size = new System.Drawing.Size(604, 148);
             this.guestDgv.TabIndex = 18;
             this.guestDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guestDgv_CellClick);
             // 
@@ -447,10 +453,20 @@
             this.generatebillbtn.Text = "GenerateBill";
             this.generatebillbtn.UseVisualStyleBackColor = false;
             // 
+            // dgvrooms
+            // 
+            this.dgvrooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvrooms.Location = new System.Drawing.Point(653, 435);
+            this.dgvrooms.Name = "dgvrooms";
+            this.dgvrooms.RowTemplate.Height = 25;
+            this.dgvrooms.Size = new System.Drawing.Size(387, 150);
+            this.dgvrooms.TabIndex = 50;
+            // 
             // Guests
             // 
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1074, 561);
+            this.Controls.Add(this.dgvrooms);
             this.Controls.Add(this.generatebillbtn);
             this.Controls.Add(this.gotodrinksbtn);
             this.Controls.Add(this.gotomealsbtn);
@@ -493,6 +509,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guestDgv)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvrooms)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -539,5 +556,6 @@
         private Button gotomealsbtn;
         private Button gotodrinksbtn;
         private Button generatebillbtn;
+        private DataGridView dgvrooms;
     }
 }

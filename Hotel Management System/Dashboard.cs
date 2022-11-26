@@ -94,5 +94,13 @@ namespace Hotel_Management_System
             f1.ShowDialog();
             f1.Show();
         }
+
+        private void generateBill_Click(object sender, EventArgs e)
+        {
+            GenerateBill f1 = new GenerateBill();
+            this.Hide();
+            f1.ShowDialog();
+
+        }
     }
 }

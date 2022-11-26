@@ -68,6 +68,11 @@
             this.roomcb = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label18 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.GuestContacttbx = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsitems)).BeginInit();
@@ -460,6 +465,49 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 23);
             this.dateTimePicker2.TabIndex = 40;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(827, 219);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(91, 15);
+            this.label18.TabIndex = 36;
+            this.label18.Text = "CustomerName";
+            this.label18.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(932, 316);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(96, 23);
+            this.comboBox1.TabIndex = 38;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(853, 319);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(42, 15);
+            this.label19.TabIndex = 39;
+            this.label19.Text = "Room:";
+            // 
+            // GuestContacttbx
+            // 
+            this.GuestContacttbx.Location = new System.Drawing.Point(928, 363);
+            this.GuestContacttbx.Name = "GuestContacttbx";
+            this.GuestContacttbx.Size = new System.Drawing.Size(100, 23);
+            this.GuestContacttbx.TabIndex = 34;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(823, 366);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(84, 15);
+            this.label20.TabIndex = 37;
+            this.label20.Text = "Guest_Contact";
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -467,14 +515,19 @@
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1044, 527);
             this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.roomcb);
+            this.Controls.Add(this.label20);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.customeraddresstbx);
+            this.Controls.Add(this.GuestContacttbx);
             this.Controls.Add(this.customerpantbx);
             this.Controls.Add(this.customernametbx);
             this.Controls.Add(this.savedatabtn);
@@ -551,5 +604,10 @@
         private ComboBox roomcb;
         private Label label17;
         private DateTimePicker dateTimePicker2;
+        private Label label18;
+        private ComboBox comboBox1;
+        private Label label19;
+        private TextBox GuestContacttbx;
+        private Label label20;
     }
 }
