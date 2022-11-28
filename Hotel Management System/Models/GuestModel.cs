@@ -14,6 +14,7 @@ public class GuestModel
     public string Guest_Contact { get; set; }
     public string Guest_Email { get; set; }
     public int Room_No{ get; set; }  
+    public int Guest_Pan { get; set; }
     public int No_Of_Individuals { get; set; }
     public  DateTime Checkin { get; set; }
     public DateTime Checkout { get; set; }

@@ -66,6 +66,8 @@
             this.gotodrinksbtn = new System.Windows.Forms.Button();
             this.generatebillbtn = new System.Windows.Forms.Button();
             this.dgvrooms = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Guest_Pan = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.guestDgv)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvrooms)).BeginInit();
@@ -207,7 +209,7 @@
             // 
             this.Checkinlbl.AutoSize = true;
             this.Checkinlbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Checkinlbl.Location = new System.Drawing.Point(351, 233);
+            this.Checkinlbl.Location = new System.Drawing.Point(351, 267);
             this.Checkinlbl.Name = "Checkinlbl";
             this.Checkinlbl.Size = new System.Drawing.Size(69, 21);
             this.Checkinlbl.TabIndex = 14;
@@ -217,7 +219,7 @@
             // 
             this.CheckOutlbl.AutoSize = true;
             this.CheckOutlbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CheckOutlbl.Location = new System.Drawing.Point(632, 230);
+            this.CheckOutlbl.Location = new System.Drawing.Point(632, 268);
             this.CheckOutlbl.Name = "CheckOutlbl";
             this.CheckOutlbl.Size = new System.Drawing.Size(82, 21);
             this.CheckOutlbl.TabIndex = 16;
@@ -236,7 +238,7 @@
             // ADDbtn
             // 
             this.ADDbtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ADDbtn.Location = new System.Drawing.Point(53, 279);
+            this.ADDbtn.Location = new System.Drawing.Point(86, 393);
             this.ADDbtn.Name = "ADDbtn";
             this.ADDbtn.Size = new System.Drawing.Size(115, 33);
             this.ADDbtn.TabIndex = 29;
@@ -255,7 +257,7 @@
             // clearbtn
             // 
             this.clearbtn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clearbtn.Location = new System.Drawing.Point(453, 278);
+            this.clearbtn.Location = new System.Drawing.Point(480, 380);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(115, 34);
             this.clearbtn.TabIndex = 32;
@@ -276,7 +278,7 @@
             // Deletebtn
             // 
             this.Deletebtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Deletebtn.Location = new System.Drawing.Point(198, 278);
+            this.Deletebtn.Location = new System.Drawing.Point(222, 380);
             this.Deletebtn.Name = "Deletebtn";
             this.Deletebtn.Size = new System.Drawing.Size(101, 34);
             this.Deletebtn.TabIndex = 34;
@@ -287,7 +289,7 @@
             // Updatebtn
             // 
             this.Updatebtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Updatebtn.Location = new System.Drawing.Point(324, 278);
+            this.Updatebtn.Location = new System.Drawing.Point(351, 380);
             this.Updatebtn.Name = "Updatebtn";
             this.Updatebtn.Size = new System.Drawing.Size(105, 34);
             this.Updatebtn.TabIndex = 35;
@@ -298,7 +300,7 @@
             // CheckinTimePicker
             // 
             this.CheckinTimePicker.CalendarFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CheckinTimePicker.Location = new System.Drawing.Point(426, 228);
+            this.CheckinTimePicker.Location = new System.Drawing.Point(440, 267);
             this.CheckinTimePicker.Name = "CheckinTimePicker";
             this.CheckinTimePicker.Size = new System.Drawing.Size(169, 23);
             this.CheckinTimePicker.TabIndex = 36;
@@ -306,7 +308,7 @@
             // CheckoutTimepicker
             // 
             this.CheckoutTimepicker.CalendarFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CheckoutTimepicker.Location = new System.Drawing.Point(748, 228);
+            this.CheckoutTimepicker.Location = new System.Drawing.Point(748, 265);
             this.CheckoutTimepicker.Name = "CheckoutTimepicker";
             this.CheckoutTimepicker.Size = new System.Drawing.Size(169, 23);
             this.CheckoutTimepicker.TabIndex = 37;
@@ -375,7 +377,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(632, 278);
+            this.label1.Location = new System.Drawing.Point(38, 267);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 21);
             this.label1.TabIndex = 40;
@@ -388,7 +390,7 @@
             "Male",
             "Female",
             "Others"});
-            this.GenderComboBox.Location = new System.Drawing.Point(748, 276);
+            this.GenderComboBox.Location = new System.Drawing.Point(154, 265);
             this.GenderComboBox.Name = "GenderComboBox";
             this.GenderComboBox.Size = new System.Drawing.Size(121, 23);
             this.GenderComboBox.TabIndex = 44;
@@ -462,6 +464,27 @@
             this.dgvrooms.Size = new System.Drawing.Size(387, 150);
             this.dgvrooms.TabIndex = 50;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(632, 217);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 21);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Guest_PAN no.";
+            this.label2.Click += new System.EventHandler(this.RoomNolbl_Click);
+            // 
+            // Guest_Pan
+            // 
+            this.Guest_Pan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Guest_Pan.Location = new System.Drawing.Point(748, 217);
+            this.Guest_Pan.Name = "Guest_Pan";
+            this.Guest_Pan.Size = new System.Drawing.Size(169, 29);
+            this.Guest_Pan.TabIndex = 11;
+            this.Guest_Pan.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.Guest_Pan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RoomNotbx_KeyPress);
+            // 
             // Guests
             // 
             this.BackColor = System.Drawing.Color.Azure;
@@ -488,6 +511,8 @@
             this.Controls.Add(this.Checkinlbl);
             this.Controls.Add(this.NoOfIndividualstbx);
             this.Controls.Add(this.NoOfIndividualslbl);
+            this.Controls.Add(this.Guest_Pan);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.RoomNotbx);
             this.Controls.Add(this.RoomNolbl);
             this.Controls.Add(this.GuestEmailtbx);
@@ -557,5 +582,7 @@
         private Button gotodrinksbtn;
         private Button generatebillbtn;
         private DataGridView dgvrooms;
+        private Label label2;
+        private TextBox Guest_Pan;
     }
 }

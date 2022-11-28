@@ -15,6 +15,7 @@ using Hotel_Management_System.Extensions;
 using Hotel_Management_System.Models;
 using MySql.Data;
 using DGVPrinterHelper;
+using System.Data.OleDb;
 using MySql.Data.MySqlClient;
 
 
@@ -155,7 +156,7 @@ namespace Hotel_Management_System
 
             obj.Item=itemsCB.Text;
             obj.Discount= GetValue(discounttbx.Text);
-            obj.Guest_Contact=Convert.ToChar(GuestContacttbx.Text);
+           
             obj.Tax=GetValue(taxtbx.Text);
             obj.VAT=GetValue(vattbx.Text);
             obj.Rate=GetValue(ratetbx.Text);
@@ -202,27 +203,29 @@ namespace Hotel_Management_System
         {
             using var tx = new TransactionScope();
             using var conn = ConnectionProvider.GetDbConnection();
-            var customername = customernametbx.Text;
-            var customeraddress = customerpantbx.Text;
-            var customerpan = customeraddresstbx.Text;
+            var guestname = guestnametbx.Text;
+            var guestcontact = GuestContacttbx.Text;
+            var guestaddress = guestaddresstbx.Text;
+            var customerpan = customerpantbx.Text;
 
-            var billInsertQuery = @"INSERT INTO `bill`(`Date`, `CustomerName`, `CustomerAddress`, `CustomerPan`, `TotalAmount`) VALUES (@date, @CustomerName, @CustomerAddress, @CustomerPan,@TotalAmount); select last_insert_id()";
+            var billInsertQuery = @"INSERT INTO `bill`(`Date`, `GuestName`,`GuestContact`, `GuestAddress`, `CustomerPan`, `TotalAmount`) VALUES (@date,@GuestName,@GuestContact, @GuestAddress, @CustomerPan,@TotalAmount); select last_insert_id()";
 
             var billId = conn.ExecuteScalar<int>(billInsertQuery, new
             {
                 date = DateTime.Now,
-                CustomerName = customername,
-                customerAddress = customeraddress,
+                GuestName = guestname,
+                GuestContact = guestcontact,
+                GuestAddress = guestaddress,
                 CustomerPan = customerpan,
                 TotalAmount = GetFullTotal()
             });
 
             foreach(var item in billingItems)
             {
-                var query = "INSERT INTO `transactions` (`Bill_ID`,`Guest_Contact`,`Item_ID`, `Items`,`Descriptions`,`Rate`,`Qty`,`Discount`,`TAX`,`VAT`,`TotalAmount`) VALUES (@billID,@Guest_Contact,@Item_ID,@Items,@Descriptions,@Rate,@Qty,@Discount,@TAX,@VAT,@TotalAmount);";
+                var query = "INSERT INTO `transactions` (`Bill_ID`,`Item_ID`, `Items`,`Descriptions`,`Rate`,`Qty`,`Discount`,`TAX`,`VAT`,`TotalAmount`) VALUES (@billID,@Item_ID,@Items,@Descriptions,@Rate,@Qty,@Discount,@TAX,@VAT,@TotalAmount);";
                 conn.Execute(query, new {
                     Item_ID = item.Item_Id,
-                    Guest_Contact = item.Guest_Contact,
+                  
                     Items = item.Item,
                     Descriptions = Descriptiontbx.Text,
                     Rate = item.Rate,
@@ -261,7 +264,7 @@ namespace Hotel_Management_System
         {
             DGVPrinter printer = new DGVPrinter();
             printer.Title = "\r\n\r\n\n\n\nPahuna Ghar";
-            printer.SubTitle = $"\n\nBirtmode-4, Jhapa,Mechinagar\r\ntelephone: 023598 ph no:9806068043\n\n\n\n Date: {dateTimePicker2.Value.ToString("yyyy-mm-dd")}\n\n Customer Name: {customernametbx.Text}   Customer Pan={customerpantbx.Text} Address: {customerpantbx.Text} \n\n\n\n";
+            printer.SubTitle = $"\n\nBirtmode-4, Jhapa,Mechinagar\r\ntelephone: 023598 ph no:9806068043\n\n\n\n Date: {dateTimePicker2.Value.ToString("yyyy-mm-dd")}\n\n Customer Name: {guestnametbx.Text}   Customer Pan={customerpantbx.Text} Address: {customerpantbx.Text} \n\n\n\n";
             printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
             printer.PageNumbers = true;
             printer.PageNumberInHeader = false;
@@ -281,6 +284,41 @@ namespace Hotel_Management_System
             printer.FooterSpacing=1;
             printer.PrintPreviewDataGridView(dataGridView1);
            */
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GuestContacttbx_TextChanged(object sender, EventArgs e)
+        {
+            using var conn = ConnectionProvider.GetDbConnection();
+            var query = "SELECT * from guests where Guest_Contact = @guestContact";
+
+
+            var item = conn.Query<GuestModel>(query, new
+            {
+                guestContact = GuestContacttbx.Text
+            });
+            var guest = item.FirstOrDefault();
+
+            if (guest!=null)
+            {
+                guestnametbx.Text = guest.Guest_Name;
+                guestaddresstbx.Text=guest.Guest_Address;
+                GuestIDtbx.Text=Convert.ToString(guest.Guest_ID);
+                RoomNotbx.Text=Convert.ToString(guest.Room_No);
+                
+
+            }
+            else
+            {
+                guestnametbx.Text = "";
+
+
+            }
+
         }
     }
 }

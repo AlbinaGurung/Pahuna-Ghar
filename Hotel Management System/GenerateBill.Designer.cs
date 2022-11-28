@@ -58,6 +58,8 @@
             this.GenerateBillbtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.PanNotbx = new System.Windows.Forms.TextBox();
+            this.Date = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -212,6 +214,7 @@
             this.RoomNotbx.Name = "RoomNotbx";
             this.RoomNotbx.Size = new System.Drawing.Size(169, 29);
             this.RoomNotbx.TabIndex = 42;
+            this.RoomNotbx.TextChanged += new System.EventHandler(this.RoomNotbx_TextChanged);
             // 
             // label1
             // 
@@ -230,6 +233,7 @@
             this.RoomPricetbx.Name = "RoomPricetbx";
             this.RoomPricetbx.Size = new System.Drawing.Size(169, 29);
             this.RoomPricetbx.TabIndex = 42;
+            this.RoomPricetbx.TextChanged += new System.EventHandler(this.RoomPricetbx_TextChanged);
             // 
             // dataGridView1
             // 
@@ -299,6 +303,8 @@
             this.ReceivedAmttbx.Name = "ReceivedAmttbx";
             this.ReceivedAmttbx.Size = new System.Drawing.Size(100, 23);
             this.ReceivedAmttbx.TabIndex = 50;
+            this.ReceivedAmttbx.TextAlignChanged += new System.EventHandler(this.ReceivedAmttbx_TextAlignChanged);
+            this.ReceivedAmttbx.TextChanged += new System.EventHandler(this.ReceivedAmttbx_TextChanged);
             // 
             // NetTotaltbx
             // 
@@ -322,6 +328,7 @@
             this.GenerateBillbtn.TabIndex = 53;
             this.GenerateBillbtn.Text = "Generate Bill";
             this.GenerateBillbtn.UseVisualStyleBackColor = true;
+            this.GenerateBillbtn.Click += new System.EventHandler(this.GenerateBillbtn_Click);
             // 
             // label7
             // 
@@ -340,12 +347,32 @@
             this.PanNotbx.Name = "PanNotbx";
             this.PanNotbx.Size = new System.Drawing.Size(169, 29);
             this.PanNotbx.TabIndex = 42;
+            this.PanNotbx.TextChanged += new System.EventHandler(this.PanNotbx_TextChanged);
+            // 
+            // Date
+            // 
+            this.Date.AutoSize = true;
+            this.Date.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Date.Location = new System.Drawing.Point(633, 99);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(42, 21);
+            this.Date.TabIndex = 54;
+            this.Date.Text = "Date";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(681, 98);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePicker1.TabIndex = 55;
             // 
             // GenerateBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(930, 513);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.Date);
             this.Controls.Add(this.GenerateBillbtn);
             this.Controls.Add(this.ReturnAmttbx);
             this.Controls.Add(this.NetTotaltbx);
@@ -415,5 +442,7 @@
         private Button GenerateBillbtn;
         private Label label7;
         private TextBox PanNotbx;
+        private Label Date;
+        private DateTimePicker dateTimePicker1;
     }
 }
