@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Hotel_Management_System.Models
 {
-    public class Items
-    {
+    public class Transaction
+{
         public int Bill_ID { get; set; }
        
-        public int Item_Id { get; set; }
-        public  string Item { get;  set; }
+        public int Item_ID { get; set; }
+        public  string Items { get;  set; }
         public string Descriptions { get; set; }
        
         public decimal Rate { get; set; }

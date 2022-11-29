@@ -25,18 +25,27 @@ namespace Hotel_Management_System
 
         private void ADDbtn_Click(object sender, EventArgs e)
         {
-            var roomid=RoomIDtbx.Text;
-            var roomtype=RoomTypetbx.Text;
-            var price = Pricetbx.Text;
-            var noofindividuals = noofindividualstbx.Text;
-            var isavailable = IsAvailabletbx.Text;
-            using var conn = ConnectionProvider.GetDbConnection();
-            
-            var query = "INSERT INTO `room` (`Room_No`, `Room_Type`, `Price`, `No_Of_Individuals`, `IsAvailable`) VALUES (@RoomID, @RoomType, @price, @NoOfIndividuals, @IsAvailable);";
-            conn.Execute(query, new { RoomID = roomid, RoomType = roomtype, price = price, NoOfIndividuals = noofindividuals, IsAvailable = isavailable });
+            DialogResult dialogResult = MessageBox.Show("ADD Room ?", "You want to add the room", MessageBoxButtons.YesNo);
+            if (dialogResult==DialogResult.Yes)
+            {
+                var roomid = RoomIDtbx.Text;
+                var roomtype = RoomTypetbx.Text;
+                var price = Pricetbx.Text;
+                var noofindividuals = noofindividualstbx.Text;
+                var isavailable = IsAvailabletbx.Text;
+                using var conn = ConnectionProvider.GetDbConnection();
 
-            conn.Close();
-            MessageBox.Show("Successfully Added");
+                var query = "INSERT INTO `room` (`Room_No`, `Room_Type`, `Price`, `No_Of_Individuals`, `IsAvailable`) VALUES (@RoomID, @RoomType, @price, @NoOfIndividuals, @IsAvailable);";
+                conn.Execute(query, new { RoomID = roomid, RoomType = roomtype, price = price, NoOfIndividuals = noofindividuals, IsAvailable = isavailable });
+
+                conn.Close();
+                MessageBox.Show("Successfully Added");
+                loadrooms();
+            }
+            else if(dialogResult==DialogResult.No)
+            {
+                //nothing
+            }
 
 
         }
@@ -77,30 +86,60 @@ namespace Hotel_Management_System
 
         private void Deletebtn_Click(object sender, EventArgs e)
         {
-            var query = "DELETE FROM `room` WHERE `room`.`Room_No` = @roomid;";
-            var ID = RoomIDtbx.Text;
-            using var conn = ConnectionProvider.GetDbConnection();
+            if (RoomIDtbx.Text!=null)
+            {
+                DialogResult dialogResult = MessageBox.Show("DELETE Room ?", "You want to delete the room", MessageBoxButtons.YesNo);
+                if (dialogResult==DialogResult.Yes)
+                {
+                    var query = "DELETE FROM `room` WHERE `room`.`Room_No` = @roomid;";
+                    var ID = RoomIDtbx.Text;
+                    using var conn = ConnectionProvider.GetDbConnection();
 
-           
-            conn.Execute(query, new { roomid = ID });
-            conn.Close();
-            MessageBox.Show("Successfully Deleted");
+
+                    conn.Execute(query, new { roomid = ID });
+                    conn.Close();
+                    MessageBox.Show("Successfully Deleted");
+                }
+                else if (dialogResult==DialogResult.No)
+                {
+                    //nothing
+                }
+            }
+            else
+            {
+                MessageBox.Show("choose the room from the table that you want to delete and press the 'DELETE' button.");
+            }
         }
 
         private void Updatebtn_Click(object sender, EventArgs e)
         {
-            var roomid = RoomIDtbx.Text;    
-            var roomtype = RoomTypetbx.Text;
-            var price = Pricetbx.Text;
-            var noofindividuals = noofindividualstbx.Text;
-            var isavailable = IsAvailabletbx.Text;
-            var conn= ConnectionProvider.GetDbConnection();
-            var query = "UPDATE `room` SET `Room_Type` = @RoomType, `Price` = @Price, `No_Of_Individuals` = @NoOfIndividuals, `IsAvailable` = @IsAvailable WHERE `room`.`Room_No` = @RoomNo;";
-            conn.Execute(query, new {RoomNo=roomid, RoomType=roomtype,Price=price,NoOfIndividuals=noofindividuals,IsAvailable=isavailable });
+            if (RoomIDtbx!=null)
+            {
+                DialogResult dialogResult = MessageBox.Show("Save changes ?", "You want to save the changes", MessageBoxButtons.YesNo);
+                if (dialogResult==DialogResult.Yes)
+                {
+                    var roomid = RoomIDtbx.Text;
+                    var roomtype = RoomTypetbx.Text;
+                    var price = Pricetbx.Text;
+                    var noofindividuals = noofindividualstbx.Text;
+                    var isavailable = IsAvailabletbx.Text;
+                    var conn = ConnectionProvider.GetDbConnection();
+                    var query = "UPDATE `room` SET `Room_Type` = @RoomType, `Price` = @Price, `No_Of_Individuals` = @NoOfIndividuals, `IsAvailable` = @IsAvailable WHERE `room`.`Room_No` = @RoomNo;";
+                    conn.Execute(query, new { RoomNo = roomid, RoomType = roomtype, Price = price, NoOfIndividuals = noofindividuals, IsAvailable = isavailable });
 
-            conn.Close();
-            MessageBox.Show("Successfully Updated");
-            loadrooms();
+                    conn.Close();
+                    MessageBox.Show("Successfully Updated");
+                    loadrooms();
+                }
+                else if (dialogResult==DialogResult.No)
+                {
+                    //nothing
+                }
+            }
+            else
+            {
+                MessageBox.Show("choose the room from the table that you want to update and press 'SAVE CHANGES' button");
+            }
         }
 
         private void clearbtn_Click(object sender, EventArgs e)
@@ -120,6 +159,21 @@ namespace Hotel_Management_System
             this.Hide();
             d1.ShowDialog();
             d1.Show();
+        }
+
+        private void addMessagebtn_Click(object sender, EventArgs e)
+        {
+            RoomIDtbx.Clear();
+            RoomTypetbx.Clear();
+            Pricetbx.Clear();
+            noofindividualstbx.Clear();
+            IsAvailabletbx.Clear();
+            RoomTypetbx.Focus();
+        }
+
+        private void UpdateMessagebtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("choose the room from the table that you want to update and press 'SAVE CHANGES'");
         }
     }
 }

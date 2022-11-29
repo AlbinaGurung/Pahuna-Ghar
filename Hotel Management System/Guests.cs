@@ -100,36 +100,44 @@ namespace Hotel_Management_System
             {
 
                 MessageBox.Show("The room no" + roomno + "is not available.\n Please Enter Another Roomno ");
-                MessageBox.Show("The value of count is" +count);
+              //  MessageBox.Show("The value of count is" +count);
             
             }
             else
             {
-                var query1 = "INSERT INTO `guests` (`Guest_ID`, `Guest_Name`, `Gender`,`Guest_Address`, `Guest_Contact`, `Guest_Email`, `Room_No`,`Guest_Pan` ,`No_Of_Individuals`, `Checkin`, `Checkout`) " +
-                        "VALUES (@ID, @Name, @gender,@Address, @Phone, @Email, @RoomNo, @GuestPan,@NoOfGuests, @Checkin, @Checkout);";
-                conn.Execute(query1, new
-                { 
-                    ID = GuestID, 
-                    Name = name,
-                    gender = Gender, 
-                    Address = address,
-                    NoOfGuests = noofguests, 
-                    Phone = phone, 
-                    Email = email, 
-                    RoomNo = roomno,
-                    GuestPan=guestpan, 
-                    Checkin = checkin, 
-                    Checkout = checkout 
-                });
-                conn.Close();
+                DialogResult dialogResult= MessageBox.Show("Add Guest", "You want to add the new guest", MessageBoxButtons.YesNo);
+                if (dialogResult==DialogResult.Yes)
+                {
+                    var query1 = "INSERT INTO `guests` (`Guest_ID`, `Guest_Name`, `Gender`,`Guest_Address`, `Guest_Contact`, `Guest_Email`, `Room_No`,`Guest_Pan` ,`No_Of_Individuals`, `Checkin`, `Checkout`) " +
+                            "VALUES (@ID, @Name, @gender,@Address, @Phone, @Email, @RoomNo, @GuestPan,@NoOfGuests, @Checkin, @Checkout);";
+                    conn.Execute(query1, new
+                    {
+                        ID = GuestID,
+                        Name = name,
+                        gender = Gender,
+                        Address = address,
+                        NoOfGuests = noofguests,
+                        Phone = phone,
+                        Email = email,
+                        RoomNo = roomno,
+                        GuestPan = guestpan,
+                        Checkin = checkin,
+                        Checkout = checkout
+                    });
+                    conn.Close();
 
-                MessageBox.Show("Added Successfully");
-                MessageBox.Show("The value of count is" +count);
+                    MessageBox.Show("Added Successfully");
+                    //  MessageBox.Show("The value of count is" +count);
 
-                var query2 = "UPDATE room SET IsAvailable = 'NO' WHERE Room_No = @RoomNo; ";
-                conn.Execute(query2, new { RoomNo=RoomNotbx.Text});
-                loadguests();
-                loadrooms();
+                    var query2 = "UPDATE room SET IsAvailable = 'NO' WHERE Room_No = @RoomNo; ";
+                    conn.Execute(query2, new { RoomNo = RoomNotbx.Text });
+                    loadguests();
+                    loadrooms();
+                }
+                else if(dialogResult==DialogResult.No)
+                {
+                   //nothing
+                }
 
             }
         }
@@ -211,26 +219,35 @@ namespace Hotel_Management_System
 
         private void Updatebtn_Click(object sender, EventArgs e)
         {
-            var GuestID = GuestIDtbx.Text;
-            var name = GuestNametbx.Text;
-            var Gender=GenderComboBox.Text;
-            var address = GuestAddresstbx.Text;
-            var phone = GuestContacttbx.Text;
-            var email = GuestEmailtbx.Text;
-            var roomno = RoomNotbx.Text;
-            var guestpan = Guest_Pan.Text;
-            var noofindividuals = NoOfIndividualstbx.Text;
-            var checkin = CheckinTimePicker.Text;
-            var checkout = CheckoutTimepicker.Text;
-            using var conn = ConnectionProvider.GetDbConnection();
+            DialogResult dialogResult = MessageBox.Show("Save changes", "You want to save the changes", MessageBoxButtons.YesNo);
+            if (dialogResult==DialogResult.Yes)
+            {
+                var GuestID = GuestIDtbx.Text;
+                var name = GuestNametbx.Text;
+                var Gender = GenderComboBox.Text;
+                var address = GuestAddresstbx.Text;
+                var phone = GuestContacttbx.Text;
+                var email = GuestEmailtbx.Text;
+                var roomno = RoomNotbx.Text;
+                var guestpan = Guest_Pan.Text;
+                var noofindividuals = NoOfIndividualstbx.Text;
+                var checkin = CheckinTimePicker.Text;
+                var checkout = CheckoutTimepicker.Text;
+                using var conn = ConnectionProvider.GetDbConnection();
 
-            var query = "UPDATE `guests` SET `Guest_Name` = @Name, `Guest_Address` = @address, `Gender`=@gender,`Guest_Contact` = @Contact, `Guest_Email` = @Email, `Room_No` = @RoomNo, `Guest_Pan`=@GuestPan, `No_Of_Individuals` = @NoOfIndividuals, `Checkin` = @CheckIn, `Checkout` = @CheckOut WHERE `guests`.`Guest_ID` = @guestid;";
+                var query = "UPDATE `guests` SET `Guest_Name` = @Name, `Guest_Address` = @address, `Gender`=@gender,`Guest_Contact` = @Contact, `Guest_Email` = @Email, `Room_No` = @RoomNo, `Guest_Pan`=@GuestPan, `No_Of_Individuals` = @NoOfIndividuals, `Checkin` = @CheckIn, `Checkout` = @CheckOut WHERE `guests`.`Guest_ID` = @guestid;";
 
-            
-            conn.Execute(query, new { guestid=GuestID,Name=name,gender=Gender, Address=address,Contact=phone,RoomNo=roomno,GuestPan=guestpan,Email=email,NoOfIndividuals=noofindividuals,CheckIn=checkin,CheckOut=checkout});
-            
-            conn.Close();
-            MessageBox.Show("Successfully Updated");
+
+                conn.Execute(query, new { guestid = GuestID, Name = name, gender = Gender, Address = address, Contact = phone, RoomNo = roomno, GuestPan = guestpan, Email = email, NoOfIndividuals = noofindividuals, CheckIn = checkin, CheckOut = checkout });
+
+                conn.Close();
+                MessageBox.Show("Successfully Updated");
+                loadguests();
+            }
+            else if(dialogResult==DialogResult.No)
+            {
+                //nothing;
+            }
             loadguests();
         }
 
@@ -253,15 +270,29 @@ namespace Hotel_Management_System
 
         private void Deletebtn_Click(object sender, EventArgs e)
         {
-            var ID = GuestIDtbx.Text;
-            using var conn = ConnectionProvider.GetDbConnection();
+            if (GuestNametbx.Text!=string.Empty)
+            {
+                DialogResult dialogResult = MessageBox.Show("Delete Record", "You want to delete the record", MessageBoxButtons.YesNo);
+                if (dialogResult==DialogResult.Yes)
+                {
+                    var ID = GuestIDtbx.Text;
+                    using var conn = ConnectionProvider.GetDbConnection();
 
-            var query = "DELETE FROM `guests` WHERE `guests`.`Guest_ID` = @Guest_ID;";
-            conn.Execute(query, new { Guest_ID = ID });
-            conn.Close();
-            MessageBox.Show("Successfully Deleted");
-           
-
+                    var query = "DELETE FROM `guests` WHERE `guests`.`Guest_ID` = @Guest_ID;";
+                    conn.Execute(query, new { Guest_ID = ID });
+                    conn.Close();
+                    MessageBox.Show("Successfully Deleted");
+                }
+                else if (dialogResult==DialogResult.No)
+                {
+                    //nothing
+                }
+                loadguests();
+            }
+            else
+            {
+                MessageBox.Show("Choose the record that you want to delete and press the 'DELETE' button");
+            }
         }
 
         private void guestDgv_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -351,6 +382,29 @@ namespace Hotel_Management_System
         private void RoomNolbl_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddNewGuestsBtn_Click(object sender, EventArgs e)
+        {
+            GuestIDtbx.Text=string.Empty;
+            GuestNametbx.Text=string.Empty;
+            GenderComboBox.Text=string.Empty;
+            GuestAddresstbx.Text=string.Empty;
+            GuestEmailtbx.Text=string.Empty;
+            GuestContacttbx.Text=string.Empty;
+            RoomNotbx.Text=string.Empty;
+            Guest_Pan.Text=String.Empty;
+            NoOfIndividualstbx.Text=string.Empty;
+            CheckinTimePicker.Text=string.Empty;
+            CheckoutTimepicker.Text=string.Empty;
+            GuestNametbx.Focus();
+
+            loadguests();
+        }
+
+        private void deleteMsgBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Choose the record that you want to delete and press the 'DELETE' button");
         }
     }
 }

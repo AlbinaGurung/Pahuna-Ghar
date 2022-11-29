@@ -17,20 +17,20 @@ using MySql.Data;
 using DGVPrinterHelper;
 using System.Data.OleDb;
 using MySql.Data.MySqlClient;
-
+using Transaction = Hotel_Management_System.Models.Transaction;
 
 namespace Hotel_Management_System
 {
     public partial class Form5 : Form
     {
-        private BindingList<Items> billingItems;
+        private BindingList<Transaction> billingItems;
 
         public Form5()
         {
             InitializeComponent();
             Load += Form5_Load1;
 
-            billingItems = new BindingList<Items>();
+            billingItems = new BindingList<Transaction>();
             dataGridView1.DataSource = billingItems;
         }
 
@@ -152,9 +152,9 @@ namespace Hotel_Management_System
         {
             // add to binding list
 
-            var obj = new Items();
+            var obj = new Transaction();
 
-            obj.Item=itemsCB.Text;
+            obj.Items=itemsCB.Text;
             obj.Discount= GetValue(discounttbx.Text);
            
             obj.Tax=GetValue(taxtbx.Text);
@@ -224,9 +224,9 @@ namespace Hotel_Management_System
             {
                 var query = "INSERT INTO `transactions` (`Bill_ID`,`Item_ID`, `Items`,`Descriptions`,`Rate`,`Qty`,`Discount`,`TAX`,`VAT`,`TotalAmount`) VALUES (@billID,@Item_ID,@Items,@Descriptions,@Rate,@Qty,@Discount,@TAX,@VAT,@TotalAmount);";
                 conn.Execute(query, new {
-                    Item_ID = item.Item_Id,
+                    Item_ID = item.Item_ID,
                   
-                    Items = item.Item,
+                    Items = item.Items,
                     Descriptions = Descriptiontbx.Text,
                     Rate = item.Rate,
                     Qty = item.Qty,

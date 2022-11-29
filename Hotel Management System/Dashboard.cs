@@ -102,5 +102,24 @@ namespace Hotel_Management_System
             f1.ShowDialog();
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void EXITbtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Exit", "You want to exit from the application", MessageBoxButtons.YesNo);
+            if(dialogResult==DialogResult.Yes)
+            {
+                Dashboard f1 = new Dashboard();
+                f1.Close();
+            }
+            else
+            {
+                //nothing
+            }
+        } 
     }
 }

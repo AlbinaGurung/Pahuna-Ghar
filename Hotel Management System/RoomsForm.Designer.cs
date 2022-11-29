@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.GoBackbtn = new System.Windows.Forms.Button();
             this.Gharlbl = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.Pahunalbl = new System.Windows.Forms.Label();
@@ -47,7 +48,8 @@
             this.Deletebtn = new System.Windows.Forms.Button();
             this.Updatebtn = new System.Windows.Forms.Button();
             this.clearbtn = new System.Windows.Forms.Button();
-            this.GoBackbtn = new System.Windows.Forms.Button();
+            this.addMessagebtn = new System.Windows.Forms.Button();
+            this.UpdateMessagebtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).BeginInit();
             this.SuspendLayout();
@@ -62,8 +64,21 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 80);
+            this.panel1.Size = new System.Drawing.Size(1034, 80);
             this.panel1.TabIndex = 40;
+            // 
+            // GoBackbtn
+            // 
+            this.GoBackbtn.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.GoBackbtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.GoBackbtn.ForeColor = System.Drawing.Color.White;
+            this.GoBackbtn.Location = new System.Drawing.Point(52, 16);
+            this.GoBackbtn.Name = "GoBackbtn";
+            this.GoBackbtn.Size = new System.Drawing.Size(107, 35);
+            this.GoBackbtn.TabIndex = 56;
+            this.GoBackbtn.Text = "Go Back";
+            this.GoBackbtn.UseVisualStyleBackColor = false;
+            this.GoBackbtn.Click += new System.EventHandler(this.GoBackbtn_Click);
             // 
             // Gharlbl
             // 
@@ -192,17 +207,17 @@
             // dgvRooms
             // 
             this.dgvRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRooms.Location = new System.Drawing.Point(370, 138);
+            this.dgvRooms.Location = new System.Drawing.Point(479, 125);
             this.dgvRooms.Name = "dgvRooms";
             this.dgvRooms.RowTemplate.Height = 25;
-            this.dgvRooms.Size = new System.Drawing.Size(418, 276);
+            this.dgvRooms.Size = new System.Drawing.Size(543, 276);
             this.dgvRooms.TabIndex = 51;
             this.dgvRooms.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRooms_CellContentClick);
             // 
             // ADDbtn
             // 
             this.ADDbtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ADDbtn.Location = new System.Drawing.Point(1, 368);
+            this.ADDbtn.Location = new System.Drawing.Point(219, 338);
             this.ADDbtn.Name = "ADDbtn";
             this.ADDbtn.Size = new System.Drawing.Size(115, 33);
             this.ADDbtn.TabIndex = 52;
@@ -213,7 +228,7 @@
             // Deletebtn
             // 
             this.Deletebtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Deletebtn.Location = new System.Drawing.Point(133, 367);
+            this.Deletebtn.Location = new System.Drawing.Point(351, 338);
             this.Deletebtn.Name = "Deletebtn";
             this.Deletebtn.Size = new System.Drawing.Size(101, 34);
             this.Deletebtn.TabIndex = 53;
@@ -224,44 +239,55 @@
             // Updatebtn
             // 
             this.Updatebtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Updatebtn.Location = new System.Drawing.Point(240, 367);
+            this.Updatebtn.Location = new System.Drawing.Point(65, 339);
             this.Updatebtn.Name = "Updatebtn";
-            this.Updatebtn.Size = new System.Drawing.Size(105, 34);
+            this.Updatebtn.Size = new System.Drawing.Size(148, 33);
             this.Updatebtn.TabIndex = 54;
-            this.Updatebtn.Text = "UPDATE";
+            this.Updatebtn.Text = "SAVE CHANGES";
             this.Updatebtn.UseVisualStyleBackColor = true;
             this.Updatebtn.Click += new System.EventHandler(this.Updatebtn_Click);
             // 
             // clearbtn
             // 
             this.clearbtn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clearbtn.Location = new System.Drawing.Point(12, 407);
+            this.clearbtn.Location = new System.Drawing.Point(261, 393);
             this.clearbtn.Name = "clearbtn";
-            this.clearbtn.Size = new System.Drawing.Size(115, 34);
+            this.clearbtn.Size = new System.Drawing.Size(115, 51);
             this.clearbtn.TabIndex = 55;
-            this.clearbtn.Text = "CLEAR";
+            this.clearbtn.Text = "Clear Fields";
             this.clearbtn.UseVisualStyleBackColor = true;
             this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
-            // GoBackbtn
+            // addMessagebtn
             // 
-            this.GoBackbtn.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.GoBackbtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.GoBackbtn.ForeColor = System.Drawing.Color.White;
-            this.GoBackbtn.Location = new System.Drawing.Point(52, 16);
-            this.GoBackbtn.Name = "GoBackbtn";
-            this.GoBackbtn.Size = new System.Drawing.Size(107, 35);
-            this.GoBackbtn.TabIndex = 56;
-            this.GoBackbtn.Text = "Go Back";
-            this.GoBackbtn.UseVisualStyleBackColor = false;
-            this.GoBackbtn.Click += new System.EventHandler(this.GoBackbtn_Click);
+            this.addMessagebtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.addMessagebtn.Location = new System.Drawing.Point(12, 392);
+            this.addMessagebtn.Name = "addMessagebtn";
+            this.addMessagebtn.Size = new System.Drawing.Size(115, 51);
+            this.addMessagebtn.TabIndex = 56;
+            this.addMessagebtn.Text = "Add New Room";
+            this.addMessagebtn.UseVisualStyleBackColor = true;
+            this.addMessagebtn.Click += new System.EventHandler(this.addMessagebtn_Click);
+            // 
+            // UpdateMessagebtn
+            // 
+            this.UpdateMessagebtn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UpdateMessagebtn.Location = new System.Drawing.Point(133, 393);
+            this.UpdateMessagebtn.Name = "UpdateMessagebtn";
+            this.UpdateMessagebtn.Size = new System.Drawing.Size(115, 51);
+            this.UpdateMessagebtn.TabIndex = 57;
+            this.UpdateMessagebtn.Text = "Update";
+            this.UpdateMessagebtn.UseVisualStyleBackColor = true;
+            this.UpdateMessagebtn.Click += new System.EventHandler(this.UpdateMessagebtn_Click);
             // 
             // RoomsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1034, 450);
+            this.Controls.Add(this.UpdateMessagebtn);
+            this.Controls.Add(this.addMessagebtn);
             this.Controls.Add(this.clearbtn);
             this.Controls.Add(this.Updatebtn);
             this.Controls.Add(this.Deletebtn);
@@ -311,5 +337,7 @@
         private Button Updatebtn;
         private Button clearbtn;
         private Button GoBackbtn;
+        private Button addMessagebtn;
+        private Button UpdateMessagebtn;
     }
 }

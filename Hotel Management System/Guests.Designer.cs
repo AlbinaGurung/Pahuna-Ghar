@@ -68,6 +68,8 @@
             this.dgvrooms = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.Guest_Pan = new System.Windows.Forms.TextBox();
+            this.AddNewGuestsBtn = new System.Windows.Forms.Button();
+            this.deleteMsgBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.guestDgv)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvrooms)).BeginInit();
@@ -238,11 +240,11 @@
             // ADDbtn
             // 
             this.ADDbtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ADDbtn.Location = new System.Drawing.Point(86, 393);
+            this.ADDbtn.Location = new System.Drawing.Point(713, 312);
             this.ADDbtn.Name = "ADDbtn";
-            this.ADDbtn.Size = new System.Drawing.Size(115, 33);
+            this.ADDbtn.Size = new System.Drawing.Size(97, 32);
             this.ADDbtn.TabIndex = 29;
-            this.ADDbtn.Text = "ADD";
+            this.ADDbtn.Text = "Add";
             this.ADDbtn.UseVisualStyleBackColor = true;
             this.ADDbtn.Click += new System.EventHandler(this.ADDbtn_Click);
             // 
@@ -257,11 +259,11 @@
             // clearbtn
             // 
             this.clearbtn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clearbtn.Location = new System.Drawing.Point(480, 380);
+            this.clearbtn.Location = new System.Drawing.Point(231, 359);
             this.clearbtn.Name = "clearbtn";
-            this.clearbtn.Size = new System.Drawing.Size(115, 34);
+            this.clearbtn.Size = new System.Drawing.Size(100, 51);
             this.clearbtn.TabIndex = 32;
-            this.clearbtn.Text = "CLEAR";
+            this.clearbtn.Text = "Clear Fields";
             this.clearbtn.UseVisualStyleBackColor = true;
             this.clearbtn.Click += new System.EventHandler(this.clearbtn_Click);
             // 
@@ -278,7 +280,7 @@
             // Deletebtn
             // 
             this.Deletebtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Deletebtn.Location = new System.Drawing.Point(222, 380);
+            this.Deletebtn.Location = new System.Drawing.Point(816, 311);
             this.Deletebtn.Name = "Deletebtn";
             this.Deletebtn.Size = new System.Drawing.Size(101, 34);
             this.Deletebtn.TabIndex = 34;
@@ -289,11 +291,11 @@
             // Updatebtn
             // 
             this.Updatebtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Updatebtn.Location = new System.Drawing.Point(351, 380);
+            this.Updatebtn.Location = new System.Drawing.Point(120, 358);
             this.Updatebtn.Name = "Updatebtn";
-            this.Updatebtn.Size = new System.Drawing.Size(105, 34);
+            this.Updatebtn.Size = new System.Drawing.Size(105, 51);
             this.Updatebtn.TabIndex = 35;
-            this.Updatebtn.Text = "UPDATE";
+            this.Updatebtn.Text = "Save Changes";
             this.Updatebtn.UseVisualStyleBackColor = true;
             this.Updatebtn.Click += new System.EventHandler(this.Updatebtn_Click);
             // 
@@ -485,10 +487,34 @@
             this.Guest_Pan.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.Guest_Pan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RoomNotbx_KeyPress);
             // 
+            // AddNewGuestsBtn
+            // 
+            this.AddNewGuestsBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AddNewGuestsBtn.Location = new System.Drawing.Point(12, 359);
+            this.AddNewGuestsBtn.Name = "AddNewGuestsBtn";
+            this.AddNewGuestsBtn.Size = new System.Drawing.Size(97, 51);
+            this.AddNewGuestsBtn.TabIndex = 51;
+            this.AddNewGuestsBtn.Text = "Add New Guest";
+            this.AddNewGuestsBtn.UseVisualStyleBackColor = true;
+            this.AddNewGuestsBtn.Click += new System.EventHandler(this.AddNewGuestsBtn_Click);
+            // 
+            // deleteMsgBtn
+            // 
+            this.deleteMsgBtn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.deleteMsgBtn.Location = new System.Drawing.Point(337, 358);
+            this.deleteMsgBtn.Name = "deleteMsgBtn";
+            this.deleteMsgBtn.Size = new System.Drawing.Size(100, 51);
+            this.deleteMsgBtn.TabIndex = 52;
+            this.deleteMsgBtn.Text = "Delete Guest Record";
+            this.deleteMsgBtn.UseVisualStyleBackColor = true;
+            this.deleteMsgBtn.Click += new System.EventHandler(this.deleteMsgBtn_Click);
+            // 
             // Guests
             // 
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1074, 561);
+            this.Controls.Add(this.deleteMsgBtn);
+            this.Controls.Add(this.AddNewGuestsBtn);
             this.Controls.Add(this.dgvrooms);
             this.Controls.Add(this.generatebillbtn);
             this.Controls.Add(this.gotodrinksbtn);
@@ -584,5 +610,7 @@
         private DataGridView dgvrooms;
         private Label label2;
         private TextBox Guest_Pan;
+        private Button AddNewGuestsBtn;
+        private Button deleteMsgBtn;
     }
 }

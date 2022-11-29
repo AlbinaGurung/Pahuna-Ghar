@@ -20,11 +20,11 @@ namespace Hotel_Management_System
 
     public partial class GenerateBill : Form
     {
-        private BindingList<Items> billingItems;
+        private BindingList<Transaction> billingItems;
         public GenerateBill()
         {
             InitializeComponent();
-            billingItems = new BindingList<Items>();
+            billingItems = new BindingList<Transaction>();
             dataGridView1.DataSource = billingItems;
 
         }
@@ -81,7 +81,7 @@ namespace Hotel_Management_System
 
 
                 var query3 = "SELECT * FROM `transactions` WHERE Bill_ID=@Billid;";
-                var transactions = conn.Query<Items>(query3, new
+                var transactions = conn.Query<Transaction>(query3, new
                 {
                     Billid = BillID
                 });
