@@ -111,6 +111,7 @@
             this.Pahunalbl.Size = new System.Drawing.Size(156, 36);
             this.Pahunalbl.TabIndex = 39;
             this.Pahunalbl.Text = "PAHUNA";
+            this.Pahunalbl.Click += new System.EventHandler(this.Pahunalbl_Click);
             // 
             // button2
             // 

@@ -26,22 +26,30 @@ namespace Hotel_Management_System
 
         private void addbtn_Click(object sender, EventArgs e)
         {
-            var name = drinknametbx.Text;
-            var desc = desctbx.Text;
-            var price=drinkpricetbx.Text;
-            
-            using var conn = ConnectionProvider.GetDbConnection();
-            var query = "INSERT INTO `drinks` ( `Drink_Name`, `Drink_Description`, `Drink_Price`) VALUES ( @Drink_Name,@Drink_Description, @Drink_Price);";
-            conn.Execute(query, new { Drink_Name = name,Drink_Description=desc,Drink_Price=price }) ;
-            conn.Close();
-            MessageBox.Show("Data Added Successfully");
-            loaddrinks();
+            DialogResult dialogResult = MessageBox.Show("Add drink", "You want to add the new drink", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                var name = drinknametbx.Text;
+                var desc = desctbx.Text;
+                var price = drinkpricetbx.Text;
+
+                using var conn = ConnectionProvider.GetDbConnection();
+                var query = "INSERT INTO `drinks` ( `Drink_Name`, `Drink_Description`, `Drink_Price`) VALUES ( @Drink_Name,@Drink_Description, @Drink_Price);";
+                conn.Execute(query, new { Drink_Name = name, Drink_Description = desc, Drink_Price = price });
+                conn.Close();
+                MessageBox.Show("Data Added Successfully");
+                loaddrinks();
+            }
+            else if(dialogResult == DialogResult.No)
+            {
+
+            }
         }
         public void loaddrinks()
         {
             using var conn = ConnectionProvider.GetDbConnection();
             var query = "SELECT * FROM `drinks`";
-            var Drinks = conn.Query<DrinksModel>(query, new {});
+            var Drinks = conn.Query<Drinks>(query, new {});
             drinksdgv.DataSource=Drinks;
 
         }
@@ -53,32 +61,47 @@ namespace Hotel_Management_System
 
         private void deletebtn_Click(object sender, EventArgs e)
         {
-            var ID = drinkidtbx.Text;
-            using var conn = ConnectionProvider.GetDbConnection();
+            DialogResult dialogResult = MessageBox.Show("Delete drink", "You want to delete the drink", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                var ID = drinkidtbx.Text;
+                using var conn = ConnectionProvider.GetDbConnection();
 
-            var query = "DELETE FROM `drinks` WHERE `drinks`.`Drink_ID` = @Drink_ID;";
-            conn.Execute(query, new { Drink_ID = ID });
-            conn.Close();
-            MessageBox.Show("Successfully Deleted");
+                var query = "DELETE FROM `drinks` WHERE `drinks`.`Drink_ID` = @Drink_ID;";
+                conn.Execute(query, new { Drink_ID = ID });
+                conn.Close();
+                MessageBox.Show("Successfully Deleted");
+            }
+            else if(dialogResult == DialogResult.No)
+            {
 
+            }
 
         }
 
         private void updatebtn_Click(object sender, EventArgs e)
         {
-            var name = drinknametbx.Text;
-            var desc = desctbx.Text;
-            var price = drinkpricetbx.Text;
+            DialogResult dialogResult = MessageBox.Show("Update drink", "You want to Update the drink", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                var name = drinknametbx.Text;
+                var desc = desctbx.Text;
+                var price = drinkpricetbx.Text;
 
-            using var conn = ConnectionProvider.GetDbConnection();
+                using var conn = ConnectionProvider.GetDbConnection();
 
-            var query = "UPDATE `drinks` SET `Drink_Name` = @Drink_Name, `Drink_Description` = @Drink_Description, `Drink_Price`=@price;";
+                var query = "UPDATE `drinks` SET `Drink_Name` = @Drink_Name, `Drink_Description` = @Drink_Description, `Drink_Price`=@price;";
 
-            conn.Execute(query, new {Drink_Name=name,Drink_Description=desc,Drink_Price=price });
+                conn.Execute(query, new { Drink_Name = name, Drink_Description = desc, Drink_Price = price });
 
-            conn.Close();
-            MessageBox.Show("Successfully Updated");
-            loaddrinks();
+                conn.Close();
+                MessageBox.Show("Successfully Updated");
+                loaddrinks();
+            }
+            else if(dialogResult == DialogResult.No)
+            {
+
+            }
         }
 
         private void clrbtn_Click(object sender, EventArgs e)
@@ -161,6 +184,14 @@ namespace Hotel_Management_System
                 desctbx.Text=drinksdgv.Rows[e.RowIndex].Cells["Description"].FormattedValue.ToString();
                 drinkpricetbx.Text=drinksdgv.Rows[e.RowIndex].Cells["Price"].FormattedValue.ToString();
             }
+            /* if (guestDgv.Rows[e.RowIndex].Cells[e.ColumnIndex].Value!=null)
+             {
+                 guestDgv.CurrentRow.Selected=true;
+                 GuestIDtbx.Text=guestDgv.Rows[e.RowIndex].Cells["Guest_ID"].FormattedValue.ToString();
+                 GuestNametbx.Text=guestDgv.Rows[e.RowIndex].Cells["Guest_Name"].FormattedValue.ToString();
+                 GenderComboBox.Text=guestDgv.Rows[e.RowIndex].Cells["Gender"].FormattedValue.ToString();
+                 GuestAddresstbx.Text=guestDgv.Rows[e.RowIndex].Cells["Guest_Address"].FormattedValue.ToString();
+             */
         }
     }
 }

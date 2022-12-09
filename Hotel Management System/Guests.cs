@@ -406,6 +406,11 @@ namespace Hotel_Management_System
         {
             MessageBox.Show("Choose the record that you want to delete and press the 'DELETE' button");
         }
+
+        private void GuestNametbx_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

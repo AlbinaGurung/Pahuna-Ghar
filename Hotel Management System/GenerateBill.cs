@@ -183,7 +183,7 @@ namespace Hotel_Management_System
             printer.HeaderCellAlignment = StringAlignment.Near;
             // printer.Footer = $"Discount: {discounttbx.Text}%\r\nTAX:{taxtbx.Text}%\r\nVAT: {vattbx.Text}%\r\nGrand Total: {Totaltbx.Text} \r\nThank You!!";
             printer.Footer=$"Total Of Food and Drinks:{TotalOfFoodandDrinkstbx.Text}\r\n Net Total(along with Room charge):{NetTotaltbx.Text}\r\n Received Amount:{ReceivedAmttbx.Text}\r\n Return Amount:{ReturnAmttbx.Text}\r\n Thank You";
-            printer.FooterSpacing = 15;
+            printer.FooterSpacing = 10;
             printer.PrintPreviewDataGridView(dataGridView1);
         }
     }

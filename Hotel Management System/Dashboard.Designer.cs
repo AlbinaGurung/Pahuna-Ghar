@@ -40,7 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.generateBill = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.GuestsRecordsbtn = new System.Windows.Forms.Button();
@@ -48,7 +47,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.EXITbtn = new System.Windows.Forms.Button();
-            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -187,25 +185,13 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 448);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 35);
             this.panel2.TabIndex = 31;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(258, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(248, 25);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Developed By Albina Gurung";
             // 
             // button3
             // 
@@ -296,9 +282,9 @@
             // 
             // EXITbtn
             // 
-            this.EXITbtn.BackColor = System.Drawing.Color.Red;
+            this.EXITbtn.BackColor = System.Drawing.Color.LightSeaGreen;
             this.EXITbtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.EXITbtn.ForeColor = System.Drawing.Color.White;
+            this.EXITbtn.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.EXITbtn.Location = new System.Drawing.Point(691, 5);
             this.EXITbtn.Name = "EXITbtn";
             this.EXITbtn.Size = new System.Drawing.Size(75, 31);
@@ -317,13 +303,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -346,7 +329,6 @@
         private Button button8;
         private Button generateBill;
         private Panel panel2;
-        private Label label3;
         private Button button3;
         private Button button2;
         private Button GuestsRecordsbtn;

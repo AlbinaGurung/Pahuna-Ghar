@@ -57,46 +57,72 @@ namespace Hotel_Management_System
 
         private void addbtn_Click(object sender, EventArgs e)
         {
-            var name = staffnametbx.Text;
-            var designation = designationtbx.Text;
-            var salary = salarytbx.Text;
+            DialogResult dialogResult = MessageBox.Show("Add staff", "You want to add the new staff", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
 
-            using var conn = ConnectionProvider.GetDbConnection();
-            var query = "INSERT INTO `staff` ( `Staff_Name`, `Designation`, `Salary`) VALUES ( @Staff_Name,@Designation, @Salary);";
-            conn.Execute(query, new { Staff_Name = name, Designation = designation, Salary =salary });
-            conn.Close();
-            MessageBox.Show("Data Added Successfully");
-            loadstaff();
+                var name = staffnametbx.Text;
+                var designation = designationtbx.Text;
+                var salary = salarytbx.Text;
+
+                using var conn = ConnectionProvider.GetDbConnection();
+                var query = "INSERT INTO `staff` ( `Staff_Name`, `Designation`, `Salary`) VALUES ( @Staff_Name,@Designation, @Salary);";
+                conn.Execute(query, new { Staff_Name = name, Designation = designation, Salary = salary });
+                conn.Close();
+                MessageBox.Show("Data Added Successfully");
+                loadstaff();
+            }
+            else if(dialogResult == DialogResult.No)
+            {
+
+            }
 
         }
 
         private void deletebtn_Click(object sender, EventArgs e)
         {
-            var ID = staffidtbx.Text;
-            using var conn = ConnectionProvider.GetDbConnection();
 
-            var query = "DELETE FROM `staff` WHERE `staff`.`Staff_ID` = @Staff_ID;";
-            conn.Execute(query, new { Staff_ID = ID });
-            conn.Close();
-            MessageBox.Show("Successfully Deleted");
-            loadstaff();
+            DialogResult dialogResult = MessageBox.Show("Delete staff", "You want to delete the staff", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                var ID = staffidtbx.Text;
+                using var conn = ConnectionProvider.GetDbConnection();
+
+                var query = "DELETE FROM `staff` WHERE `staff`.`Staff_ID` = @Staff_ID;";
+                conn.Execute(query, new { Staff_ID = ID });
+                conn.Close();
+                MessageBox.Show("Successfully Deleted");
+                loadstaff();
+            }
+            else if(dialogResult != DialogResult.No)
+            {
+
+            }
         }
 
         private void updatebtn_Click(object sender, EventArgs e)
         {
-            var name = staffnametbx.Text;
-            var designation = designationtbx.Text;
-            var salary =salarytbx.Text;
+            DialogResult dialogResult = MessageBox.Show("Update staff", "You want to Update the staff", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                var name = staffnametbx.Text;
+                var designation = designationtbx.Text;
+                var salary = salarytbx.Text;
 
-            using var conn = ConnectionProvider.GetDbConnection();
+                using var conn = ConnectionProvider.GetDbConnection();
 
-            var query = "UPDATE `staff` SET `Staff_Name` = @Staff_Name, `Designation` = @Designation, `Salary`=@Salary;";
+                var query = "UPDATE `staff` SET `Staff_Name` = @Staff_Name, `Designation` = @Designation, `Salary`=@Salary;";
 
-            conn.Execute(query, new { Staff_Name = name, Designation = designation, Salary = salary });
+                conn.Execute(query, new { Staff_Name = name, Designation = designation, Salary = salary });
 
-            conn.Close();
-            MessageBox.Show("Successfully Updated");
-            loadstaff();
+                conn.Close();
+                MessageBox.Show("Successfully Updated");
+                loadstaff();
+            }
+            else if(dialogResult == DialogResult.No)
+            {
+
+            }
         }
 
         private void clrbtn_Click(object sender, EventArgs e)

@@ -17,6 +17,11 @@ namespace Hotel_Management_System
         public MealsFrm()
         {
             InitializeComponent();
+            idtbx.Clear();
+            nametbx.Clear();
+            desctbx.Clear();
+            pricetbx.Clear();
+            loadmeals();
         }
         private void loadmeals()
         {
@@ -28,16 +33,28 @@ namespace Hotel_Management_System
 
         private void addbtn_Click(object sender, EventArgs e)
         {
-            var name = nametbx.Text;
-            var desc = desctbx.Text;
-            var price = pricetbx.Text;
+            
+                DialogResult dialogResult = MessageBox.Show("Add meal", "You want to add the new meal", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
 
-            using var conn = ConnectionProvider.GetDbConnection();
-            var query = "INSERT INTO `meals` ( `Name`, `Description`, `Price`) VALUES ( @Name,@Description, @Price);";
-            conn.Execute(query, new { Name = name, Description = desc, Price = price });
-            conn.Close();
-            MessageBox.Show("Data Added Successfully");
-            loadmeals();
+                    var name = nametbx.Text;
+                    var desc = desctbx.Text;
+                    var price = pricetbx.Text;
+
+                    using var conn = ConnectionProvider.GetDbConnection();
+                    var query = "INSERT INTO `meals` ( `Name`, `Description`, `Price`) VALUES ( @Name,@Description, @Price);";
+                    conn.Execute(query, new { Name = name, Description = desc, Price = price });
+                    conn.Close();
+                    MessageBox.Show("Data Added Successfully");
+                    loadmeals();
+                }
+                else if (dialogResult==DialogResult.No)
+                {
+                    loadmeals();
+
+                }
+           
         }
 
         private void gobackbtn_Click(object sender, EventArgs e)
@@ -51,31 +68,53 @@ namespace Hotel_Management_System
 
         private void deletebtn_Click(object sender, EventArgs e)
         {
-            var mealid = idtbx.Text;
-            using var conn = ConnectionProvider.GetDbConnection();
+           
+                DialogResult dialogResult = MessageBox.Show("Delete meal", "You want to delete the meal", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    var mealid = idtbx.Text;
+                    using var conn = ConnectionProvider.GetDbConnection();
 
-            var query = "DELETE FROM `drinks` WHERE `meals`.`ID` = @ID;";
-            conn.Execute(query, new { ID = mealid});
-            conn.Close();
-            MessageBox.Show("Successfully Deleted");
-            loadmeals();
+                    var query = "DELETE FROM `meals` WHERE `ID` = @ID1;";
+                    conn.Execute(query, new { ID1= mealid });
+                    conn.Close();
+                    MessageBox.Show("Successfully Deleted");
+                    loadmeals();
+
+                }
+                else if (dialogResult==DialogResult.No)
+                {
+
+                }
+            
         }
 
         private void updatebtn_Click(object sender, EventArgs e)
         {
-            var name = nametbx.Text;
-            var desc = desctbx.Text;
-            var price = pricetbx.Text;
+           
 
-            using var conn = ConnectionProvider.GetDbConnection();
+                DialogResult dialogResult = MessageBox.Show("Update meal", "You want to Update the meal", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    var name = nametbx.Text;
+                    var desc = desctbx.Text;
+                    var price = pricetbx.Text;
 
-            var query = "UPDATE `meals` SET `Name` = @Name, `Description` = @Description, `Price`=@Price;";
+                    using var conn = ConnectionProvider.GetDbConnection();
 
-            conn.Execute(query, new { Name = name, Description = desc,Price = price });
+                    var query = "UPDATE `meals` SET `Name` = @Name, `Description` = @Description, `Price`=@Price;";
 
-            conn.Close();
-            MessageBox.Show("Successfully Updated");
-            loadmeals();
+                    conn.Execute(query, new { Name = name, Description = desc, Price = price });
+
+                    conn.Close();
+                    MessageBox.Show("Successfully Updated");
+                    loadmeals();
+                }
+                else if (dialogResult==DialogResult.No)
+                {
+
+                }
+          
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -119,6 +158,11 @@ namespace Hotel_Management_System
         private void MealsFrm_Load(object sender, EventArgs e)
         {
             loadmeals();
+        }
+
+        private void Pahunalbl_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

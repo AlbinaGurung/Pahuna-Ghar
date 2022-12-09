@@ -101,6 +101,7 @@
             this.GuestNametbx.Name = "GuestNametbx";
             this.GuestNametbx.Size = new System.Drawing.Size(169, 29);
             this.GuestNametbx.TabIndex = 3;
+            this.GuestNametbx.TextChanged += new System.EventHandler(this.GuestNametbx_TextChanged);
             // 
             // GuestNamelbl
             // 
@@ -334,6 +335,7 @@
             this.panel1.Controls.Add(this.Gharlbl);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.Pahunalbl);
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -345,7 +347,7 @@
             this.button1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(22, 23);
+            this.button1.Location = new System.Drawing.Point(12, 32);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 35);
             this.button1.TabIndex = 41;
@@ -399,12 +401,14 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(351, 12);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(10, 10);
             this.button2.TabIndex = 45;
             this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // gotoroombtn
             // 
@@ -450,7 +454,7 @@
             this.generatebillbtn.BackColor = System.Drawing.Color.Green;
             this.generatebillbtn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.generatebillbtn.ForeColor = System.Drawing.Color.White;
-            this.generatebillbtn.Location = new System.Drawing.Point(911, 393);
+            this.generatebillbtn.Location = new System.Drawing.Point(943, 391);
             this.generatebillbtn.Name = "generatebillbtn";
             this.generatebillbtn.Size = new System.Drawing.Size(151, 38);
             this.generatebillbtn.TabIndex = 49;
@@ -520,7 +524,6 @@
             this.Controls.Add(this.gotodrinksbtn);
             this.Controls.Add(this.gotomealsbtn);
             this.Controls.Add(this.gotoroombtn);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.GenderComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
